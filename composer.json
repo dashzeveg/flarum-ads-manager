@@ -2,7 +2,11 @@
     "name": "dashzeveg/flarum-ads-manager",
     "description": "Manage and rotate ads across multiple forum zones with an easy admin panel. Supports header, sidebar, discussion lists, discussion pages, and more — with per-zone toggle controls and random ad rotation.",
     "keywords": [
-        "flarum"
+        "flarum",
+        "extension",
+        "ads",
+        "advertisement",
+        "ad-manager"
     ],
     "type": "flarum-extension",
     "license": "MIT",
@@ -26,9 +30,9 @@
             "title": "Ads Manager",
             "category": "",
             "icon": {
-                "name": "",
-                "color": "",
-                "backgroundColor": ""
+                "name": "fas fa-ad",
+                "backgroundColor": "#e74c3c",
+                "color": "#fff"
             }
         },
         "flarum-cli": {

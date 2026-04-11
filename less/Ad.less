@@ -1,0 +1,30 @@
+/******************************** Ad header top *********************************/
+#ad-header-top {
+  text-align: center;
+  width: 100%;
+}
+
+#ad-header-top .AdHeaderTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.AdHeaderTop-desktop {
+  display: none;
+}
+
+.AdHeaderTop-mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .AdHeaderTop-desktop {
+    display: block;
+  }
+
+  .AdHeaderTop-mobile {
+    display: none;
+  }
+}

@@ -2,6 +2,54 @@ dashzeveg-ads-manager:
   # For more details on the format
   # Checkout https://docs.flarum.org/2.x/extend/i18n/#appendix-a-standard-key-format
   admin:
-    my_cool_key: My Cool Key
+    ad_header_top_enabled_label: Enable
+    ad_header_top_random_label: Randomize
+    ad_header_top_random_help: When enabled, one of the ads will be shown randomly on each page load
+    ad_header_top_desktop_label1: Desktop 1
+    ad_header_top_desktop_help1: Enter your ad code
+    ad_header_top_desktop_label2: Desktop 2
+    ad_header_top_desktop_help2: Enter your ad code
+    ad_header_top_desktop_label3: Desktop 3
+    ad_header_top_desktop_help3: Enter your ad code
+    ad_header_top_desktop_label4: Desktop 4
+    ad_header_top_desktop_help4: Enter your ad code
+    ad_header_top_desktop_label5: Desktop 5
+    ad_header_top_desktop_help5: Enter your ad code
+
+    ad_header_top_mobile_label1: Mobile 1
+    ad_header_top_mobile_help1: Enter your ad code
+    ad_header_top_mobile_label2: Mobile 2
+    ad_header_top_mobile_help2: Enter your ad code
+    ad_header_top_mobile_label3: Mobile 3
+    ad_header_top_mobile_help3: Enter your ad code
+    ad_header_top_mobile_label4: Mobile 4
+    ad_header_top_mobile_help4: Enter your ad code
+    ad_header_top_mobile_label5: Mobile 5
+    ad_header_top_mobile_help5: Enter your ad code
+
+    ad_header_bottom_enabled_label: Enable
+    ad_header_bottom_random_label: Randomize
+    ad_header_bottom_random_help: When enabled, one of the ads will be shown randomly on each page load
+    ad_header_bottom_desktop_label1: Desktop 1
+    ad_header_bottom_desktop_help1: Enter your ad code
+    ad_header_bottom_desktop_label2: Desktop 2
+    ad_header_bottom_desktop_help2: Enter your ad code
+    ad_header_bottom_desktop_label3: Desktop 3
+    ad_header_bottom_desktop_help3: Enter your ad code
+    ad_header_bottom_desktop_label4: Desktop 4
+    ad_header_bottom_desktop_help4: Enter your ad code
+    ad_header_bottom_desktop_label5: Desktop 5
+    ad_header_bottom_desktop_help5: Enter your ad code
+
+    ad_header_bottom_mobile_label1: Mobile 1
+    ad_header_bottom_mobile_help1: Enter your ad code
+    ad_header_bottom_mobile_label2: Mobile 2
+    ad_header_bottom_mobile_help2: Enter your ad code
+    ad_header_bottom_mobile_label3: Mobile 3
+    ad_header_bottom_mobile_help3: Enter your ad code
+    ad_header_bottom_mobile_label4: Mobile 4
+    ad_header_bottom_mobile_help4: Enter your ad code
+    ad_header_bottom_mobile_label5: Mobile 5
+    ad_header_bottom_mobile_help5: Enter your ad code
 
   forum:

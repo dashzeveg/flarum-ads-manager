@@ -16,9 +16,37 @@ use Flarum\Extend;
 return [
     (new Extend\Frontend('forum'))
         ->js(__DIR__.'/js/dist/forum.js')
-        ->css(__DIR__.'/less/forum.less'),
+        ->css(__DIR__.'/less/forum.less')
+        ->css(__DIR__ .'/less/Ad.less'),
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js')
-        ->css(__DIR__.'/less/admin.less'),
+        ->css(__DIR__.'/less/admin.less')
+        ->css(__DIR__ .'/less/AdsManager.less'),
     new Extend\Locales(__DIR__.'/locale'),
+    (new \Flarum\Extend\Settings())
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_top_enabled', 'dashzeveg-ads-manager.ad_header_top_enabled', 'boolval')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_top_random', 'dashzeveg-ads-manager.ad_header_top_random', 'boolval')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_top_desktop1', 'dashzeveg-ads-manager.ad_header_top_desktop1')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_top_desktop2', 'dashzeveg-ads-manager.ad_header_top_desktop2')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_top_desktop3', 'dashzeveg-ads-manager.ad_header_top_desktop3')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_top_desktop4', 'dashzeveg-ads-manager.ad_header_top_desktop4')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_top_desktop5', 'dashzeveg-ads-manager.ad_header_top_desktop5')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_top_mobile1', 'dashzeveg-ads-manager.ad_header_top_mobile1')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_top_mobile2', 'dashzeveg-ads-manager.ad_header_top_mobile2')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_top_mobile3', 'dashzeveg-ads-manager.ad_header_top_mobile3')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_top_mobile4', 'dashzeveg-ads-manager.ad_header_top_mobile4')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_top_mobile5', 'dashzeveg-ads-manager.ad_header_top_mobile5')
+    
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_bottom_enabled', 'dashzeveg-ads-manager.ad_header_bottom_enabled', 'boolval')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_bottom_random', 'dashzeveg-ads-manager.ad_header_bottom_random', 'boolval')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_bottom_desktop1', 'dashzeveg-ads-manager.ad_header_bottom_desktop1')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_bottom_desktop2', 'dashzeveg-ads-manager.ad_header_bottom_desktop2')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_bottom_desktop3', 'dashzeveg-ads-manager.ad_header_bottom_desktop3')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_bottom_desktop4', 'dashzeveg-ads-manager.ad_header_bottom_desktop4')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_bottom_desktop5', 'dashzeveg-ads-manager.ad_header_bottom_desktop5')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_bottom_mobile1', 'dashzeveg-ads-manager.ad_header_bottom_mobile1')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_bottom_mobile2', 'dashzeveg-ads-manager.ad_header_bottom_mobile2')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_bottom_mobile3', 'dashzeveg-ads-manager.ad_header_bottom_mobile3')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_bottom_mobile4', 'dashzeveg-ads-manager.ad_header_bottom_mobile4')
+    ->serializeToForum('dashzeveg-ads-manager.ad_header_bottom_mobile5', 'dashzeveg-ads-manager.ad_header_bottom_mobile5'),
 ];
