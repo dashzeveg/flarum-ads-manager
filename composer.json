@@ -1,6 +1,6 @@
 {
     "name": "dashzeveg/flarum-ads-manager",
-    "description": "Manage and rotate ads across multiple forum zones with an easy admin panel. Supports header, sidebar, discussion lists, discussion pages, and more — with per-zone toggle controls and random ad rotation.",
+    "description": "A comprehensive ad management extension for Flarum that lets you place ads in multiple locations across your forum. Supports separate desktop and mobile ad codes, randomization, and per-page visibility controls.",
     "keywords": [
         "flarum",
         "extension",
