@@ -2,6 +2,7 @@
 #ad-header-top {
   text-align: center;
   width: 100%;
+  margin: 15px 0;
 }
 
 #ad-header-top .AdHeaderTop {
@@ -33,6 +34,7 @@
 #ad-header-bottom {
   text-align: center;
   width: 100%;
+  margin: 15px 0;
 }
 
 #ad-header-bottom .AdHeaderBottom {
@@ -63,7 +65,8 @@
 /******************************** Ad Left Side Nav *********************************/
 .AdLeftSideNav {
   text-align: center;
-  margin-top: 15px;
+  width: 100%;
+  margin: 15px 0;
 }
 
 .AdLeftSideNav-desktop {
@@ -80,6 +83,80 @@
   }
 
   .AdLeftSideNav-mobile {
+    display: none;
+  }
+}
+
+/******************************** Ad Right Side Nav *********************************/
+.AdRightSideNav {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.AdRightSideNav-desktop {
+  display: none;
+}
+
+.AdRightSideNav-mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .AdRightSideNav-desktop {
+    display: block;
+  }
+
+  .AdRightSideNav-mobile {
+    display: none;
+  }
+}
+
+/******************************** Ad Right Side Nav *********************************/
+.AdFirstDiscussionEnd {
+  text-align: center;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.AdFirstDiscussionEnd-desktop {
+  display: none;
+}
+
+.AdFirstDiscussionEnd-mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .AdFirstDiscussionEnd-desktop {
+    display: block;
+  }
+
+  .AdFirstDiscussionEnd-mobile {
+    display: none;
+  }
+}
+
+/******************************** Ad Tags Page *********************************/
+.AdTagsPage {
+  text-align: center;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.AdTagsPage-desktop {
+  display: none;
+}
+
+.AdTagsPage-mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .AdTagsPage-desktop {
+    display: block;
+  }
+
+  .AdTagsPage-mobile {
     display: none;
   }
 }
