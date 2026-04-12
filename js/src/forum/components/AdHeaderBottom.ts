@@ -25,8 +25,8 @@ export default class AdHeaderBottom extends Component {
       if (desktopAds.length) desktopHtml = desktopAds[Math.floor(Math.random() * desktopAds.length)];
       if (mobileAds.length) mobileHtml = mobileAds[Math.floor(Math.random() * mobileAds.length)];
     } else {
-      desktopHtml = desktopAds.join('');
-      mobileHtml = mobileAds.join('');
+      desktopHtml = desktopAds[0];
+      mobileHtml = mobileAds[0];
     }
 
     return m('div', { className: 'AdHeaderBottom' }, [
