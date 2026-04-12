@@ -14,10 +14,45 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_enabled_label'),
     })
     .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_header_top_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_show_mobile_ad_on_mobile_devices_label'),
+    })
+    .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_header_top_random',
       type: 'boolean',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_random_label'),
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_random_help'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_header_top_show_on_index_page',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_show_on_index_page_label'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_header_top_show_on_discussion_page',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_show_on_discussion_page_label'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_header_top_show_on_tags_page',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_show_on_tags_page_label'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_header_top_show_on_user_page',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_show_on_user_page_label'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_header_top_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_show_mobile_ad_on_mobile_devices_label'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_header_top_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_show_mobile_ad_on_mobile_devices_label'),
     })
     .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_header_top_show_mobile_ad_on_mobile_devices',
@@ -90,15 +125,35 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_bottom_enabled_label'),
     })
     .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_header_bottom_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_bottom_show_mobile_ad_on_mobile_devices_label'),
+    })
+    .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_header_bottom_random',
       type: 'boolean',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_bottom_random_label'),
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_bottom_random_help'),
     })
     .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_header_bottom_show_mobile_ad_on_mobile_devices',
+      setting: 'dashzeveg-ads-manager.ad_header_bottom_show_on_index_page',
       type: 'boolean',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_bottom_show_mobile_ad_on_mobile_devices_label'),
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_bottom_show_on_index_page_label'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_header_bottom_show_on_discussion_page',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_bottom_show_on_discussion_page_label'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_header_bottom_show_on_tags_page',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_bottom_show_on_tags_page_label'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_header_bottom_show_on_user_page',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_bottom_show_on_user_page_label'),
     })
     .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_header_bottom_desktop1',
@@ -161,20 +216,102 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_bottom_mobile_help5'),
     })
     .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_enabled',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_enabled_label'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.admin.admin.ad_discussion_list_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_show_mobile_ad_on_mobile_devices_label'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_random',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_random_label'),
+      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_random_help'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_show_ad_every_x_discussions',
+      type: 'number',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_show_ad_every_x_discussions_label'),
+      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_show_ad_every_x_discussions_help'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_desktop1',
+      type: 'textarea',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_label1'),
+      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_help1'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_mobile1',
+      type: 'textarea',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_label1'),
+      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_help1'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_desktop2',
+      type: 'textarea',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_label2'),
+      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_help2'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_mobile2',
+      type: 'textarea',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_label2'),
+      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_help2'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_desktop3',
+      type: 'textarea',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_label3'),
+      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_help3'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_mobile3',
+      type: 'textarea',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_label3'),
+      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_help3'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_desktop4',
+      type: 'textarea',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_label4'),
+      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_help4'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_mobile4',
+      type: 'textarea',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_label4'),
+      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_help4'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_desktop5',
+      type: 'textarea',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_label5'),
+      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_help5'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_mobile5',
+      type: 'textarea',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_label5'),
+      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_help5'),
+    })
+    .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_left_side_nav_enabled',
       type: 'boolean',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_left_side_nav_enabled_label'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_left_side_nav_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_left_side_nav_show_mobile_ad_on_mobile_devices_label'),
     })
     .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_left_side_nav_random',
       type: 'boolean',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_left_side_nav_random_label'),
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_left_side_nav_random_help'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_left_side_nav_show_mobile_ad_on_mobile_devices',
-      type: 'boolean',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_left_side_nav_show_mobile_ad_on_mobile_devices_label'),
     })
     .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_left_side_nav_desktop1',
@@ -242,15 +379,15 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_right_side_nav_enabled_label'),
     })
     .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_right_side_nav_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_right_side_nav_show_mobile_ad_on_mobile_devices_label'),
+    })
+    .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_right_side_nav_random',
       type: 'boolean',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_right_side_nav_random_label'),
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_right_side_nav_random_help'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_right_side_nav_show_mobile_ad_on_mobile_devices',
-      type: 'boolean',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_right_side_nav_show_mobile_ad_on_mobile_devices_label'),
     })
     .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_right_side_nav_desktop1',
@@ -318,15 +455,15 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_first_discussion_end_enabled_label'),
     })
     .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_first_discussion_end_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_first_discussion_end_show_mobile_ad_on_mobile_devices_label'),
+    })
+    .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_first_discussion_end_random',
       type: 'boolean',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_first_discussion_end_random_label'),
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_first_discussion_end_random_help'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_first_discussion_end_show_mobile_ad_on_mobile_devices',
-      type: 'boolean',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_first_discussion_end_show_mobile_ad_on_mobile_devices_label'),
     })
     .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_first_discussion_end_desktop1',
@@ -394,15 +531,15 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_tags_page_enabled_label'),
     })
     .registerSetting({
+      setting: 'dashzeveg-ads-manager.admin.ad_tags_page_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_tags_page_show_mobile_ad_on_mobile_devices_label'),
+    })
+    .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_tags_page_random',
       type: 'boolean',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_tags_page_random_label'),
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_tags_page_random_help'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.admin.ad_tags_page_show_mobile_ad_on_mobile_devices',
-      type: 'boolean',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_tags_page_show_mobile_ad_on_mobile_devices_label'),
     })
     .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_tags_page_desktop1',
@@ -463,88 +600,6 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       type: 'textarea',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_tags_page_mobile_label5'),
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_tags_page_mobile_help5'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_discussion_list_enabled',
-      type: 'boolean',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_enabled_label'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_discussion_list_random',
-      type: 'boolean',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_random_label'),
-      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_random_help'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.admin.admin.ad_discussion_list_show_mobile_ad_on_mobile_devices',
-      type: 'boolean',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_show_mobile_ad_on_mobile_devices_label'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_discussion_list_show_ad_every_x_discussions',
-      type: 'number',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_show_ad_every_x_discussions_label'),
-      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_show_ad_every_x_discussions_help'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_discussion_list_desktop1',
-      type: 'textarea',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_label1'),
-      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_help1'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_discussion_list_mobile1',
-      type: 'textarea',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_label1'),
-      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_help1'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_discussion_list_desktop2',
-      type: 'textarea',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_label2'),
-      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_help2'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_discussion_list_mobile2',
-      type: 'textarea',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_label2'),
-      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_help2'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_discussion_list_desktop3',
-      type: 'textarea',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_label3'),
-      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_help3'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_discussion_list_mobile3',
-      type: 'textarea',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_label3'),
-      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_help3'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_discussion_list_desktop4',
-      type: 'textarea',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_label4'),
-      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_help4'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_discussion_list_mobile4',
-      type: 'textarea',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_label4'),
-      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_help4'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_discussion_list_desktop5',
-      type: 'textarea',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_label5'),
-      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_help5'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_discussion_list_mobile5',
-      type: 'textarea',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_label5'),
-      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_mobile_help5'),
     });
 
   extend(ExtensionPage.prototype, 'oncreate', function () {
@@ -569,7 +624,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-bottom';
       separator.innerHTML = '<hr><h3>Header Bottom Ad</h3>';
-      formBody.insertBefore(separator, children[14]);
+      formBody.insertBefore(separator, children[18]);
     }
 
     // Insert "Left Side Nav Ad" title after top section
@@ -578,7 +633,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-left-side-nav';
       separator.innerHTML = '<hr><h3>Left Side Nav Ad</h3>';
-      formBody.insertBefore(separator, children[28]);
+      formBody.insertBefore(separator, children[36]);
     }
 
     // Insert "Right Side Nav Ad" title after top section
@@ -587,7 +642,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-right-side-nav';
       separator.innerHTML = '<hr><h3>Right Side Nav Ad</h3>';
-      formBody.insertBefore(separator, children[42]);
+      formBody.insertBefore(separator, children[50]);
     }
 
     // Insert "First Discussion End Ad" title after top section
@@ -596,7 +651,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-first-discussion-end';
       separator.innerHTML = '<hr><h3>First Discussion End Ad</h3>';
-      formBody.insertBefore(separator, children[56]);
+      formBody.insertBefore(separator, children[64]);
     }
 
     // Insert "Tags Page Ad" title after top section
@@ -605,7 +660,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-tags-page';
       separator.innerHTML = '<hr><h3>Tags Page Ad</h3>';
-      formBody.insertBefore(separator, children[70]);
+      formBody.insertBefore(separator, children[78]);
     }
 
     // Insert "Discussion List Ad" title after top section
@@ -614,7 +669,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-discussion-list';
       separator.innerHTML = '<hr><h3>Discussion List Ad</h3>';
-      formBody.insertBefore(separator, children[84]);
+      formBody.insertBefore(separator, children[92]);
     }
   });
 });

@@ -60,6 +60,31 @@
   }
 }
 
+/******************************** Ad Discussion List *********************************/
+.ad-discussion-list {
+  text-align: center;
+  width: 100%;
+  list-style: none;
+}
+
+.AdDiscussionList-desktop {
+  display: none;
+}
+
+.AdDiscussionList-mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .AdDiscussionList-desktop {
+    display: block;
+  }
+
+  .AdDiscussionList-mobile {
+    display: none;
+  }
+}
+
 /******************************** Ad Left Side Nav *********************************/
 .AdLeftSideNav {
   text-align: center;
@@ -107,7 +132,7 @@
   }
 }
 
-/******************************** Ad Right Side Nav *********************************/
+/******************************** Ad First Discussion End *********************************/
 .AdFirstDiscussionEnd {
   text-align: center;
   width: 100%;
@@ -151,31 +176,6 @@
   }
 
   .AdTagsPage-mobile {
-    display: none;
-  }
-}
-
-/******************************** Ad Tags Page *********************************/
-.ad-discussion-list {
-  text-align: center;
-  width: 100%;
-  list-style: none;
-}
-
-.AdDiscussionList-desktop {
-  display: none;
-}
-
-.AdDiscussionList-mobile {
-  display: block;
-}
-
-@media (min-width: 768px) {
-  .AdDiscussionList-desktop {
-    display: block;
-  }
-
-  .AdDiscussionList-mobile {
     display: none;
   }
 }

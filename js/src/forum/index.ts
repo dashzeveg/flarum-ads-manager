@@ -14,20 +14,66 @@ app.initializers.add('dashzeveg-ads-manager', () => {
     const injectAds = () => {
       // Header Top Ad - after #drawer
       const drawer = document.getElementById('drawer');
-      if (drawer && drawer.parentNode && !document.getElementById('ad-header-top')) {
-        const container = document.createElement('div');
-        container.id = 'ad-header-top';
-        drawer.parentNode.insertBefore(container, drawer.nextSibling);
-        m.mount(container, { view: () => m(AdHeaderTop) });
+      if (drawer && drawer.parentNode) {
+        const showOnIndex = app.forum.attribute('dashzeveg-ads-manager.ad_header_top_show_on_index_page');
+        const showOnDiscussion = app.forum.attribute('dashzeveg-ads-manager.ad_header_top_show_on_discussion_page');
+        const showOnTags = app.forum.attribute('dashzeveg-ads-manager.ad_header_top_show_on_tags_page');
+        const showOnUser = app.forum.attribute('dashzeveg-ads-manager.ad_header_top_show_on_user_page');
+
+        const isIndex = !!document.querySelector('.IndexPage');
+        const isDiscussion = !!document.querySelector('.DiscussionPage');
+        const isTags = !!document.querySelector('.TagsPage');
+        const isUser = !!document.querySelector('.UserPage');
+
+        const shouldShow =
+          (isIndex && showOnIndex) ||
+          (isDiscussion && showOnDiscussion) ||
+          (isTags && showOnTags) ||
+          (isUser && showOnUser);
+
+        const existing = document.getElementById('ad-header-top');
+
+        if (shouldShow && !existing) {
+          const container = document.createElement('div');
+          container.id = 'ad-header-top';
+          drawer.parentNode.insertBefore(container, drawer.nextSibling);
+          m.mount(container, { view: () => m(AdHeaderTop) });
+        } else if (!shouldShow && existing) {
+          m.mount(existing, null);
+          existing.remove();
+        }
       }
 
       // Header Bottom Ad - before .Page-container
       const pageContainer = document.querySelector('.Page-container.container');
-      if (pageContainer && pageContainer.parentNode && !document.getElementById('ad-header-bottom')) {
-        const container = document.createElement('div');
-        container.id = 'ad-header-bottom';
-        pageContainer.parentNode.insertBefore(container, pageContainer);
-        m.mount(container, { view: () => m(AdHeaderBottom) });
+      if (pageContainer && pageContainer.parentNode) {
+        const showOnIndex = app.forum.attribute('dashzeveg-ads-manager.ad_header_bottom_show_on_index_page');
+        const showOnDiscussion = app.forum.attribute('dashzeveg-ads-manager.ad_header_bottom_show_on_discussion_page');
+        const showOnTags = app.forum.attribute('dashzeveg-ads-manager.ad_header_bottom_show_on_tags_page');
+        const showOnUser = app.forum.attribute('dashzeveg-ads-manager.ad_header_bottom_show_on_user_page');
+
+        const isIndex = !!document.querySelector('.IndexPage');
+        const isDiscussion = !!document.querySelector('.DiscussionPage');
+        const isTags = !!document.querySelector('.TagsPage');
+        const isUser = !!document.querySelector('.UserPage');
+
+        const shouldShow =
+          (isIndex && showOnIndex) ||
+          (isDiscussion && showOnDiscussion) ||
+          (isTags && showOnTags) ||
+          (isUser && showOnUser);
+
+        const existing = document.getElementById('ad-header-bottom');
+
+        if (shouldShow && !existing) {
+          const container = document.createElement('div');
+          container.id = 'ad-header-bottom';
+          pageContainer.parentNode.insertBefore(container, pageContainer);
+          m.mount(container, { view: () => m(AdHeaderBottom) });
+        } else if (!shouldShow && existing) {
+          m.mount(existing, null);
+          existing.remove();
+        }
       }
 
       // Left Side Nav Ad - after .item-tags (only on IndexPage)
