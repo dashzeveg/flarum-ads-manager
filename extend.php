@@ -100,5 +100,18 @@ return [
         ->serializeToForum('dashzeveg-ads-manager.ad_tags_page_desktop4', 'dashzeveg-ads-manager.ad_tags_page_desktop4')
         ->serializeToForum('dashzeveg-ads-manager.ad_tags_page_mobile4', 'dashzeveg-ads-manager.ad_tags_page_mobile4')
         ->serializeToForum('dashzeveg-ads-manager.ad_tags_page_desktop5', 'dashzeveg-ads-manager.ad_tags_page_desktop5')
-        ->serializeToForum('dashzeveg-ads-manager.ad_tags_page_mobile5', 'dashzeveg-ads-manager.ad_tags_page_mobile5'),
+        ->serializeToForum('dashzeveg-ads-manager.ad_tags_page_mobile5', 'dashzeveg-ads-manager.ad_tags_page_mobile5')
+        
+        ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_enabled', 'dashzeveg-ads-manager.ad_discussion_list_enabled', 'boolval')
+        ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_random', 'dashzeveg-ads-manager.ad_discussion_list_random', 'boolval')
+        ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_desktop1', 'dashzeveg-ads-manager.ad_discussion_list_desktop1')
+        ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_mobile1', 'dashzeveg-ads-manager.ad_discussion_list_mobile1')
+        ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_desktop2', 'dashzeveg-ads-manager.ad_discussion_list_desktop2')
+        ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_mobile2', 'dashzeveg-ads-manager.ad_discussion_list_mobile2')
+        ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_desktop3', 'dashzeveg-ads-manager.ad_discussion_list_desktop3')
+        ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_mobile3', 'dashzeveg-ads-manager.ad_discussion_list_mobile3')
+        ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_desktop4', 'dashzeveg-ads-manager.ad_discussion_list_desktop4')
+        ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_mobile4', 'dashzeveg-ads-manager.ad_discussion_list_mobile4')
+        ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_desktop5', 'dashzeveg-ads-manager.ad_discussion_list_desktop5')
+        ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_mobile5', 'dashzeveg-ads-manager.ad_discussion_list_mobile5'),
 ];

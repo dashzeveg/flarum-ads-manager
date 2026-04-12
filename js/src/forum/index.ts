@@ -5,6 +5,7 @@ import AdLeftSideNav from './components/AdLeftSideNav';
 import AdRightSideNav from './components/AdRightSideNav';
 import AdFirstDiscussionEnd from './components/AdFirstDiscussionEnd';
 import AdTagsPage from './components/AdTagsPage';
+import AdDiscussionList from './components/AdDiscussionList';
 
 export { default as extend } from './extend';
 
@@ -66,6 +67,35 @@ app.initializers.add('dashzeveg-ads-manager', () => {
           container.className = 'ad-tags-page';
           pageContent.parentNode.insertBefore(container, pageContent);
           m.mount(container, { view: () => m(AdTagsPage) });
+        }
+      }
+
+      // Discussion List Ad - every 5 discussions
+      const discussionList = document.querySelector('.DiscussionList-discussions');
+      if (discussionList) {
+        const discussions = discussionList.querySelectorAll(':scope > li:not(.ad-discussion-list)');
+        discussions.forEach((item, index) => {
+          if ((index + 1) % 5 === 0) {
+            const nextEl = item.nextElementSibling;
+            if (!nextEl || !nextEl.classList.contains('ad-discussion-list')) {
+              const container = document.createElement('li');
+              container.className = 'ad-discussion-list';
+              item.parentNode!.insertBefore(container, item.nextSibling);
+              m.mount(container, { view: () => m(AdDiscussionList) });
+            }
+          }
+        });
+
+        // If fewer than 5 discussions, show ad after the last one
+        if (discussions.length > 0 && discussions.length < 5) {
+          const lastItem = discussions[discussions.length - 1];
+          const nextEl = lastItem.nextElementSibling;
+          if (!nextEl || !nextEl.classList.contains('ad-discussion-list')) {
+            const container = document.createElement('li');
+            container.className = 'ad-discussion-list';
+            lastItem.parentNode!.insertBefore(container, lastItem.nextSibling);
+            m.mount(container, { view: () => m(AdDiscussionList) });
+          }
         }
       }
     };
