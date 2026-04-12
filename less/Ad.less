@@ -1,4 +1,4 @@
-/******************************** Ad header top *********************************/
+/******************************** Ad Header Top *********************************/
 #ad-header-top {
   text-align: center;
   width: 100%;
@@ -25,6 +25,37 @@
   }
 
   .AdHeaderTop-mobile {
+    display: none;
+  }
+}
+
+/******************************** Ad Header Bottom *********************************/
+#ad-header-bottom {
+  text-align: center;
+  width: 100%;
+}
+
+#ad-header-bottom .AdHeaderBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.AdHeaderBottom-desktop {
+  display: none;
+}
+
+.AdHeaderBottom-mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .AdHeaderBottom-desktop {
+    display: block;
+  }
+
+  .AdHeaderBottom-mobile {
     display: none;
   }
 }
