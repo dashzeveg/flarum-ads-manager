@@ -70,31 +70,46 @@ app.initializers.add('dashzeveg-ads-manager', () => {
         }
       }
 
-      // Discussion List Ad - every 5 discussions
+      // Discussion List Ad
       const discussionList = document.querySelector('.DiscussionList-discussions');
       if (discussionList) {
+        const everyX = parseInt(app.forum.attribute('dashzeveg-ads-manager.ad_discussion_list_show_ad_every_x_discussions') || '0', 10);
         const discussions = discussionList.querySelectorAll(':scope > li:not(.ad-discussion-list)');
-        discussions.forEach((item, index) => {
-          if ((index + 1) % 5 === 0) {
-            const nextEl = item.nextElementSibling;
+
+        if (everyX === 0) {
+          // Show only one ad after the 5th discussion (or after last if fewer than 5)
+          const targetIndex = Math.min(4, discussions.length - 1);
+          if (targetIndex >= 0 && !document.querySelector('.ad-discussion-list')) {
+            const targetItem = discussions[targetIndex];
+            const container = document.createElement('li');
+            container.className = 'ad-discussion-list';
+            targetItem.parentNode!.insertBefore(container, targetItem.nextSibling);
+            m.mount(container, { view: () => m(AdDiscussionList) });
+          }
+        } else {
+          // Show ad every X discussions
+          discussions.forEach((item, index) => {
+            if ((index + 1) % everyX === 0) {
+              const nextEl = item.nextElementSibling;
+              if (!nextEl || !nextEl.classList.contains('ad-discussion-list')) {
+                const container = document.createElement('li');
+                container.className = 'ad-discussion-list';
+                item.parentNode!.insertBefore(container, item.nextSibling);
+                m.mount(container, { view: () => m(AdDiscussionList) });
+              }
+            }
+          });
+
+          // If fewer than X discussions, show ad after the last one
+          if (discussions.length > 0 && discussions.length < everyX) {
+            const lastItem = discussions[discussions.length - 1];
+            const nextEl = lastItem.nextElementSibling;
             if (!nextEl || !nextEl.classList.contains('ad-discussion-list')) {
               const container = document.createElement('li');
               container.className = 'ad-discussion-list';
-              item.parentNode!.insertBefore(container, item.nextSibling);
+              lastItem.parentNode!.insertBefore(container, lastItem.nextSibling);
               m.mount(container, { view: () => m(AdDiscussionList) });
             }
-          }
-        });
-
-        // If fewer than 5 discussions, show ad after the last one
-        if (discussions.length > 0 && discussions.length < 5) {
-          const lastItem = discussions[discussions.length - 1];
-          const nextEl = lastItem.nextElementSibling;
-          if (!nextEl || !nextEl.classList.contains('ad-discussion-list')) {
-            const container = document.createElement('li');
-            container.className = 'ad-discussion-list';
-            lastItem.parentNode!.insertBefore(container, lastItem.nextSibling);
-            m.mount(container, { view: () => m(AdDiscussionList) });
           }
         }
       }

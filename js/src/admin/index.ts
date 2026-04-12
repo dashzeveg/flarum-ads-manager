@@ -481,6 +481,12 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_show_mobile_ad_on_mobile_devices_label'),
     })
     .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_show_ad_every_x_discussions',
+      type: 'number',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_show_ad_every_x_discussions_label'),
+      help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_show_ad_every_x_discussions_help'),
+    })
+    .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_discussion_list_desktop1',
       type: 'textarea',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_desktop_label1'),

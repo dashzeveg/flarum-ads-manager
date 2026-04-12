@@ -111,6 +111,7 @@ return [
         ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_enabled', 'dashzeveg-ads-manager.ad_discussion_list_enabled', 'boolval')
         ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_random', 'dashzeveg-ads-manager.ad_discussion_list_random', 'boolval')
         ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_show_mobile_ad_on_mobile_devices', 'dashzeveg-ads-manager.ad_discussion_list_show_mobile_ad_on_mobile_devices', 'boolval')
+        ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_show_ad_every_x_discussions', 'dashzeveg-ads-manager.ad_discussion_list_show_ad_every_x_discussions', 'intval')
         ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_desktop1', 'dashzeveg-ads-manager.ad_discussion_list_desktop1')
         ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_mobile1', 'dashzeveg-ads-manager.ad_discussion_list_mobile1')
         ->serializeToForum('dashzeveg-ads-manager.ad_discussion_list_desktop2', 'dashzeveg-ads-manager.ad_discussion_list_desktop2')

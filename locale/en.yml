@@ -162,6 +162,8 @@ dashzeveg-ads-manager:
     ad_discussion_list_random_label: Randomize
     ad_discussion_list_random_help: When enabled, one of the ads will be shown randomly on each page load
     ad_discussion_list_show_mobile_ad_on_mobile_devices_label: Show mobile ad on mobile devices
+    ad_discussion_list_show_ad_every_x_discussions_label: Show ad every X discussions
+    ad_discussion_list_show_ad_every_x_discussions_help: e.g. If set to 3, an ad will be shown after every 3 discussions. If not set or set to 0, the ad will be shown only once after the 5th discussion.
     ad_discussion_list_desktop_label1: Desktop 1
     ad_discussion_list_desktop_help1: Enter your ad code
     ad_discussion_list_desktop_label2: Desktop 2
