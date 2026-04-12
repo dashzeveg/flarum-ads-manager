@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/dashzeveg/flarum-ads-manager.svg)](https://packagist.org/packages/dashzeveg/flarum-ads-manager) [![Total Downloads](https://img.shields.io/packagist/dt/dashzeveg/flarum-ads-manager.svg)](https://packagist.org/packages/dashzeveg/flarum-ads-manager)
 
-A [Flarum](https://flarum.org) extension. Manage and rotate ads across multiple forum zones with an easy admin panel. Supports header, sidebar, discussion lists, discussion pages, and more — with per-zone toggle controls and random ad rotation.
+A [Flarum](https://flarum.org) extension. A comprehensive ad management extension for Flarum that lets you place ads in multiple locations across your forum. Supports separate desktop and mobile ad codes, randomization, and per-page visibility controls.
 
 ## Installation
 
