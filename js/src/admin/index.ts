@@ -627,13 +627,22 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       formBody.insertBefore(separator, children[18]);
     }
 
+    // Insert "Discussion List Ad" title after top section
+    // After first separator insertion: 1 separator + 2 toggles + 10 textareas = 13
+    if (!formBody.querySelector('.ads-manager-separator-discussion-list')) {
+      const separator = document.createElement('div');
+      separator.className = 'ads-manager-separator ads-manager-separator-discussion-list';
+      separator.innerHTML = '<hr><h3>Discussion List Ad</h3>';
+      formBody.insertBefore(separator, children[36]);
+    }
+
     // Insert "Left Side Nav Ad" title after top section
     // After first separator insertion: 1 separator + 2 toggles + 10 textareas = 13
     if (!formBody.querySelector('.ads-manager-separator-left-side-nav')) {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-left-side-nav';
       separator.innerHTML = '<hr><h3>Left Side Nav Ad</h3>';
-      formBody.insertBefore(separator, children[36]);
+      formBody.insertBefore(separator, children[51]);
     }
 
     // Insert "Right Side Nav Ad" title after top section
@@ -642,7 +651,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-right-side-nav';
       separator.innerHTML = '<hr><h3>Right Side Nav Ad</h3>';
-      formBody.insertBefore(separator, children[50]);
+      formBody.insertBefore(separator, children[65]);
     }
 
     // Insert "First Discussion End Ad" title after top section
@@ -651,7 +660,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-first-discussion-end';
       separator.innerHTML = '<hr><h3>First Discussion End Ad</h3>';
-      formBody.insertBefore(separator, children[64]);
+      formBody.insertBefore(separator, children[79]);
     }
 
     // Insert "Tags Page Ad" title after top section
@@ -660,16 +669,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-tags-page';
       separator.innerHTML = '<hr><h3>Tags Page Ad</h3>';
-      formBody.insertBefore(separator, children[78]);
-    }
-
-    // Insert "Discussion List Ad" title after top section
-    // After first separator insertion: 1 separator + 2 toggles + 10 textareas = 13
-    if (!formBody.querySelector('.ads-manager-separator-discussion-list')) {
-      const separator = document.createElement('div');
-      separator.className = 'ads-manager-separator ads-manager-separator-discussion-list';
-      separator.innerHTML = '<hr><h3>Discussion List Ad</h3>';
-      formBody.insertBefore(separator, children[92]);
+      formBody.insertBefore(separator, children[93]);
     }
   });
 });
