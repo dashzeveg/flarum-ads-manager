@@ -4,6 +4,17 @@
 
 A [Flarum](https://flarum.org) extension. A comprehensive ad management extension for Flarum that lets you place ads in multiple locations across your forum. Supports separate desktop and mobile ad codes, randomization, and per-page visibility controls.
 
+## Features:
+
+- 7 ad positions: Header Top, Header Bottom, Left Sidebar, Right Sidebar, After First Post, Tags Page, and Discussion List
+- Up to 5 ad slots per position for both desktop and mobile
+- Randomize ads to show a different one on each page load
+- Toggle mobile ads on/off per position
+- Control which pages each ad appears on (Home, Discussion, Tags, User)
+- Configurable ad frequency in discussion lists (every X discussions)
+- Responsive design with separate desktop and mobile ad codes
+- Works with any ad network (Google AdSense, affiliate banners, custom HTML)
+
 ## Installation
 
 Install with composer:
