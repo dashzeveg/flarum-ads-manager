@@ -8,6 +8,7 @@ export default class AdRightSideNav extends Component {
     if (!enabled) return null;
 
     const random = app.forum.attribute('dashzeveg-ads-manager.ad_right_side_nav_random');
+    const showMobileAd = app.forum.attribute('dashzeveg-ads-manager.ad_right_side_nav_show_mobile_ad');
     const desktopAds: string[] = [];
     const mobileAds: string[] = [];
 
@@ -25,21 +26,28 @@ export default class AdRightSideNav extends Component {
       if (desktopAds.length) desktopHtml = desktopAds[Math.floor(Math.random() * desktopAds.length)];
       if (mobileAds.length) mobileHtml = mobileAds[Math.floor(Math.random() * mobileAds.length)];
     } else {
-      desktopHtml = desktopAds[0];
-      mobileHtml = mobileAds[0];
+      desktopHtml = desktopAds[0] || '';
+      mobileHtml = mobileAds[0] || '';
     }
 
-    return m('div', { className: 'AdRightSideNav' }, [
+    const children = [
       m('div', {
         className: 'AdRightSideNav-desktop',
         oncreate: (vnode: any) => { vnode.dom.innerHTML = desktopHtml; },
         onupdate: (vnode: any) => { vnode.dom.innerHTML = desktopHtml; },
       }),
-      m('div', {
-        className: 'AdRightSideNav-mobile',
-        oncreate: (vnode: any) => { vnode.dom.innerHTML = mobileHtml; },
-        onupdate: (vnode: any) => { vnode.dom.innerHTML = mobileHtml; },
-      }),
-    ]);
+    ];
+
+    if (showMobileAd) {
+      children.push(
+        m('div', {
+          className: 'AdRightSideNav-mobile',
+          oncreate: (vnode: any) => { vnode.dom.innerHTML = mobileHtml; },
+          onupdate: (vnode: any) => { vnode.dom.innerHTML = mobileHtml; },
+        })
+      );
+    }
+
+    return m('div', { className: 'AdRightSideNav' }, children);
   }
 }

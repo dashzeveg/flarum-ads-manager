@@ -20,6 +20,11 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_random_help'),
     })
     .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_header_top_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_show_mobile_ad_on_mobile_devices_label'),
+    })
+    .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_header_top_desktop1',
       type: 'textarea',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_desktop_label1'),
@@ -89,6 +94,11 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       type: 'boolean',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_bottom_random_label'),
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_bottom_random_help'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_header_bottom_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_bottom_show_mobile_ad_on_mobile_devices_label'),
     })
     .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_header_bottom_desktop1',
@@ -162,6 +172,11 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_left_side_nav_random_help'),
     })
     .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_left_side_nav_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_left_side_nav_show_mobile_ad_on_mobile_devices_label'),
+    })
+    .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_left_side_nav_desktop1',
       type: 'textarea',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_left_side_nav_desktop_label1'),
@@ -231,6 +246,11 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       type: 'boolean',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_right_side_nav_random_label'),
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_right_side_nav_random_help'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_right_side_nav_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_right_side_nav_show_mobile_ad_on_mobile_devices_label'),
     })
     .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_right_side_nav_desktop1',
@@ -304,6 +324,11 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_first_discussion_end_random_help'),
     })
     .registerSetting({
+      setting: 'dashzeveg-ads-manager.ad_first_discussion_end_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_first_discussion_end_show_mobile_ad_on_mobile_devices_label'),
+    })
+    .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_first_discussion_end_desktop1',
       type: 'textarea',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_first_discussion_end_desktop_label1'),
@@ -375,6 +400,11 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_tags_page_random_help'),
     })
     .registerSetting({
+      setting: 'dashzeveg-ads-manager.admin.ad_tags_page_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_tags_page_show_mobile_ad_on_mobile_devices_label'),
+    })
+    .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_tags_page_desktop1',
       type: 'textarea',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_tags_page_desktop_label1'),
@@ -444,6 +474,11 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       type: 'boolean',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_random_label'),
       help: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_random_help'),
+    })
+    .registerSetting({
+      setting: 'dashzeveg-ads-manager.admin.admin.ad_discussion_list_show_mobile_ad_on_mobile_devices',
+      type: 'boolean',
+      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_show_mobile_ad_on_mobile_devices_label'),
     })
     .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_discussion_list_desktop1',
@@ -528,7 +563,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-bottom';
       separator.innerHTML = '<hr><h3>Header Bottom Ad</h3>';
-      formBody.insertBefore(separator, children[13]);
+      formBody.insertBefore(separator, children[14]);
     }
 
     // Insert "Left Side Nav Ad" title after top section
@@ -537,7 +572,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-left-side-nav';
       separator.innerHTML = '<hr><h3>Left Side Nav Ad</h3>';
-      formBody.insertBefore(separator, children[26]);
+      formBody.insertBefore(separator, children[28]);
     }
 
     // Insert "Right Side Nav Ad" title after top section
@@ -546,7 +581,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-right-side-nav';
       separator.innerHTML = '<hr><h3>Right Side Nav Ad</h3>';
-      formBody.insertBefore(separator, children[39]);
+      formBody.insertBefore(separator, children[42]);
     }
 
     // Insert "First Discussion End Ad" title after top section
@@ -555,7 +590,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-first-discussion-end';
       separator.innerHTML = '<hr><h3>First Discussion End Ad</h3>';
-      formBody.insertBefore(separator, children[52]);
+      formBody.insertBefore(separator, children[56]);
     }
 
     // Insert "Tags Page Ad" title after top section
@@ -564,7 +599,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-tags-page';
       separator.innerHTML = '<hr><h3>Tags Page Ad</h3>';
-      formBody.insertBefore(separator, children[65]);
+      formBody.insertBefore(separator, children[70]);
     }
 
     // Insert "Discussion List Ad" title after top section
@@ -573,7 +608,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       const separator = document.createElement('div');
       separator.className = 'ads-manager-separator ads-manager-separator-discussion-list';
       separator.innerHTML = '<hr><h3>Discussion List Ad</h3>';
-      formBody.insertBefore(separator, children[78]);
+      formBody.insertBefore(separator, children[84]);
     }
   });
 });
