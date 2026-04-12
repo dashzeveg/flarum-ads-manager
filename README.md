@@ -22,6 +22,7 @@ Install with composer:
 ```sh
 composer require dashzeveg/flarum-ads-manager:"*"
 ```
+Then enable it in your admin panel.
 
 ## Updating
 
