@@ -3,7 +3,7 @@ dashzeveg-ads-manager:
   # Checkout https://docs.flarum.org/2.x/extend/i18n/#appendix-a-standard-key-format
   admin:
     ad_header_top_enabled_label: Enable
-    ad_header_top_show_mobile_ad_on_mobile_devices_label: Show mobile ad on mobile devices
+    ad_header_top_show_mobile_ad_label: Show mobile ad on mobile devices
     ad_header_top_random_label: Randomize
     ad_header_top_random_help: When enabled, one of the ads will be shown randomly on each page load
     ad_header_top_show_on_index_page_label: Show on Home page
@@ -33,7 +33,7 @@ dashzeveg-ads-manager:
     ad_header_top_mobile_help5: Enter your ad code
 
     ad_header_bottom_enabled_label: Enable
-    ad_header_bottom_show_mobile_ad_on_mobile_devices_label: Show mobile ad on mobile devices
+    ad_header_bottom_show_mobile_ad_label: Show mobile ad on mobile devices
     ad_header_bottom_random_label: Randomize
     ad_header_bottom_random_help: When enabled, one of the ads will be shown randomly on each page load
     ad_header_bottom_show_on_index_page_label: Show on Home page
@@ -63,7 +63,7 @@ dashzeveg-ads-manager:
     ad_header_bottom_mobile_help5: Enter your ad code
 
     ad_discussion_list_enabled_label: Enable
-    ad_discussion_list_show_mobile_ad_on_mobile_devices_label: Show mobile ad on mobile devices
+    ad_discussion_list_show_mobile_ad_label: Show mobile ad on mobile devices
     ad_discussion_list_random_label: Randomize
     ad_discussion_list_random_help: When enabled, one of the ads will be shown randomly on each page load
     ad_discussion_list_show_ad_every_x_discussions_label: Show ad every X discussions
@@ -91,7 +91,7 @@ dashzeveg-ads-manager:
     ad_discussion_list_mobile_help5: Enter your ad code
 
     ad_left_side_nav_enabled_label: Enable
-    ad_left_side_nav_show_mobile_ad_on_mobile_devices_label: Show mobile ad on mobile devices
+    ad_left_side_nav_show_mobile_ad_label: Show mobile ad on mobile devices
     ad_left_side_nav_random_label: Randomize
     ad_left_side_nav_random_help: When enabled, one of the ads will be shown randomly on each page load
     ad_left_side_nav_desktop_label1: Desktop 1
@@ -117,7 +117,7 @@ dashzeveg-ads-manager:
     ad_left_side_nav_mobile_help5: Enter your ad code
 
     ad_right_side_nav_enabled_label: Enable
-    ad_right_side_nav_show_mobile_ad_on_mobile_devices_label: Show mobile ad on mobile devices
+    ad_right_side_nav_show_mobile_ad_label: Show mobile ad on mobile devices
     ad_right_side_nav_random_label: Randomize
     ad_right_side_nav_random_help: When enabled, one of the ads will be shown randomly on each page load
     ad_right_side_nav_desktop_label1: Desktop 1
@@ -143,7 +143,7 @@ dashzeveg-ads-manager:
     ad_right_side_nav_mobile_help5: Enter your ad code
 
     ad_first_discussion_end_enabled_label: Enable
-    ad_first_discussion_end_show_mobile_ad_on_mobile_devices_label: Show mobile ad on mobile devices
+    ad_first_discussion_end_show_mobile_ad_label: Show mobile ad on mobile devices
     ad_first_discussion_end_random_label: Randomize
     ad_first_discussion_end_random_help: When enabled, one of the ads will be shown randomly on each page load
     ad_first_discussion_end_desktop_label1: Desktop 1
@@ -169,7 +169,7 @@ dashzeveg-ads-manager:
     ad_first_discussion_end_mobile_help5: Enter your ad code
 
     ad_tags_page_enabled_label: Enable
-    ad_tags_page_show_mobile_ad_on_mobile_devices_label: Show mobile ad on mobile devices
+    ad_tags_page_show_mobile_ad_label: Show mobile ad on mobile devices
     ad_tags_page_random_label: Randomize
     ad_tags_page_random_help: When enabled, one of the ads will be shown randomly on each page load
     ad_tags_page_desktop_label1: Desktop 1

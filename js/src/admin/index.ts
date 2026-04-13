@@ -45,21 +45,6 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_show_on_user_page_label'),
     })
     .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_header_top_show_mobile_ad',
-      type: 'boolean',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_show_mobile_ad_label'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_header_top_show_mobile_ad',
-      type: 'boolean',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_show_mobile_ad_label'),
-    })
-    .registerSetting({
-      setting: 'dashzeveg-ads-manager.ad_header_top_show_mobile_ad',
-      type: 'boolean',
-      label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_show_mobile_ad_label'),
-    })
-    .registerSetting({
       setting: 'dashzeveg-ads-manager.ad_header_top_desktop1',
       type: 'textarea',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_header_top_desktop_label1'),
@@ -221,7 +206,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_enabled_label'),
     })
     .registerSetting({
-      setting: 'dashzeveg-ads-manager.admin.admin.ad_discussion_list_show_mobile_ad',
+      setting: 'dashzeveg-ads-manager.ad_discussion_list_show_mobile_ad',
       type: 'boolean',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_discussion_list_show_mobile_ad_label'),
     })
@@ -531,7 +516,7 @@ app.initializers.add('dashzeveg-ads-manager', () => {
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_tags_page_enabled_label'),
     })
     .registerSetting({
-      setting: 'dashzeveg-ads-manager.admin.ad_tags_page_show_mobile_ad',
+      setting: 'dashzeveg-ads-manager.ad_tags_page_show_mobile_ad',
       type: 'boolean',
       label: app.translator.trans('dashzeveg-ads-manager.admin.ad_tags_page_show_mobile_ad_label'),
     })
