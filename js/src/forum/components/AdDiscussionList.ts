@@ -1,6 +1,5 @@
 import app from 'flarum/forum/app';
 import Component from 'flarum/common/Component';
-import activateScripts from '../utils/activateScripts';
 
 export default class AdDiscussionList extends Component {
   view() {
@@ -34,14 +33,8 @@ export default class AdDiscussionList extends Component {
     const children = [
       m('div', {
         className: 'AdDiscussionList-desktop',
-        oncreate: (vnode: any) => {
-          vnode.dom.innerHTML = desktopHtml;
-          activateScripts(vnode.dom);
-        },
-        onupdate: (vnode: any) => {
-          vnode.dom.innerHTML = desktopHtml;
-          activateScripts(vnode.dom);
-        },
+        oncreate: (vnode: any) => { vnode.dom.innerHTML = desktopHtml; },
+        onupdate: (vnode: any) => { vnode.dom.innerHTML = desktopHtml; },
       }),
     ];
 
@@ -49,14 +42,8 @@ export default class AdDiscussionList extends Component {
       children.push(
         m('div', {
           className: 'AdDiscussionList-mobile',
-          oncreate: (vnode: any) => {
-            vnode.dom.innerHTML = mobileHtml;
-            activateScripts(vnode.dom);
-          },
-          onupdate: (vnode: any) => {
-            vnode.dom.innerHTML = mobileHtml;
-            activateScripts(vnode.dom);
-          },
+          oncreate: (vnode: any) => { vnode.dom.innerHTML = mobileHtml; },
+          onupdate: (vnode: any) => { vnode.dom.innerHTML = mobileHtml; },
         })
       );
     }
