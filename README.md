@@ -36,4 +36,4 @@ php flarum cache:clear
 
 - [Packagist](https://packagist.org/packages/dashzeveg/flarum-ads-manager)
 - [GitHub](https://github.com/dashzeveg/flarum-ads-manager)
-- [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)
+- [Discuss](https://discuss.flarum.org/d/39072-ads-manager-place-ads-anywhere-on-your-flarum-forum)
