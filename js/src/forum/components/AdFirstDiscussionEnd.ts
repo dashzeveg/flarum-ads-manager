@@ -1,5 +1,6 @@
 import app from 'flarum/forum/app';
 import Component from 'flarum/common/Component';
+import { renderAdInFrame } from '../utils/renderAdInFrame';
 
 export default class AdFirstDiscussionEnd extends Component {
   view() {
@@ -33,8 +34,8 @@ export default class AdFirstDiscussionEnd extends Component {
     const children = [
       m('div', {
         className: 'AdFirstDiscussionEnd-desktop',
-        oncreate: (vnode: any) => { vnode.dom.innerHTML = desktopHtml; },
-        onupdate: (vnode: any) => { vnode.dom.innerHTML = desktopHtml; },
+        oncreate: (vnode: any) => renderAdInFrame(vnode.dom, desktopHtml),
+        onupdate: (vnode: any) => renderAdInFrame(vnode.dom, desktopHtml),
       }),
     ];
 
@@ -42,8 +43,8 @@ export default class AdFirstDiscussionEnd extends Component {
       children.push(
         m('div', {
           className: 'AdFirstDiscussionEnd-mobile',
-          oncreate: (vnode: any) => { vnode.dom.innerHTML = mobileHtml; },
-          onupdate: (vnode: any) => { vnode.dom.innerHTML = mobileHtml; },
+          oncreate: (vnode: any) => renderAdInFrame(vnode.dom, mobileHtml),
+          onupdate: (vnode: any) => renderAdInFrame(vnode.dom, mobileHtml),
         })
       );
     }
